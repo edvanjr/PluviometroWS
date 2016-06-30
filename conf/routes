@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /medidas                    controllers.Application.medidas()
+GET     /alerta                     controllers.Application.alerta()
+GET     /alterarAlerta/:valor       controllers.Application.alterarAlerta(valor:Double)
+GET     /criarAlerta                controllers.Application.criarAlerta()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
